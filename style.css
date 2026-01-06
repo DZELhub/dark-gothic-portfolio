@@ -52,3 +52,72 @@ body {
   text-transform: uppercase;
   opacity: 0.8;
 }
+
+/*! ------------------------------------------------------ */
+/*! ------------------- BLOOD CONTAINER ------------------ */
+/*! ------------------------------------------------------ */
+
+.blood-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/*? BLOOD DRIPS */
+
+.drip {
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--accent-color), #5a0000);
+  border-radius: 0 0 50% 50%;
+  animation: drip 4s ease-in infinite;
+  opacity: 0.9;
+}
+
+.drip:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+.drip:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+.drip:nth-child(3) {
+  left: 45%;
+  animation-delay: 2s;
+}
+.drip:nth-child(4) {
+  left: 70%;
+  animation-delay: 0.5s;
+}
+.drip:nth-child(5) {
+  left: 90%;
+  animation-delay: 1.5s;
+}
+
+/*? DRIP ANIMATION */
+
+@keyframes drip {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    height: 140px;
+    opacity: 1;
+  }
+  100% {
+    height: 140px;
+    opacity: 0;
+  }
+}
