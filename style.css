@@ -1,0 +1,54 @@
+/*! ---------------------- CSS RESET --------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*! ------------------- ROOT VARIABLES ------------------- */
+
+:root {
+  --bg-color: #0b0b0b;
+  --text-color: #e5e5e5;
+  --accent-color: #8b0000;
+  --font-title: "Cinzel", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/*! -------------------- GLOBAL STYLES ------------------- */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+/*! ------------------------------------------------------ */
+/*! -------------------- HERO SECTION -------------------- */
+/*! ------------------------------------------------------ */
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
