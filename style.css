@@ -214,3 +214,69 @@ body {
     transform: translateY(0);
   }
 }
+
+/*! ------------------ PROJECTS SECTION ------------------ */
+
+.projects {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background-color: var(--bg-color);
+}
+
+.section-title {
+  font-family: var(--font-title);
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin-bottom: 4rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  padding: 3rem 2rem;
+  background-color: #111;
+  border: 1px solid rgba(139, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card h3 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.4), 0 0 40px rgba(139, 0, 0, 0.2);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(139, 0, 0, 0.15),
+    transparent 60%
+  );
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
